@@ -4,7 +4,7 @@ stat_array = [132, 130, 115, 113, 112, 110, 105, 102, 100, 100, 100, 100, 99, 99
 
 print("Welcome to the Pokemon VRC Speed Order!")
 while True:
-      pokemon_amount = input("Enter the amount of pokemon: (2/4)")
+      pokemon_amount = input("Enter the amount of pokemon: (2/4): ")
       if pokemon_amount == '2':
             input_1 = input("Name the first Pokemon: ")
             input_2 = input("Name the second Pokemon: ")
