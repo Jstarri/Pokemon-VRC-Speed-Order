@@ -5,10 +5,34 @@ stat_array = [132, 130, 115, 113, 112, 110, 105, 102, 100, 100, 100, 100, 99, 99
 
 print("Welcome to the Pokemon VRC Speed Order!")
 while True:
-      pokemon_amount = input("Enter the amount of pokemon: (2/4): ")
+      pokemon_amount = input("Enter the amount of pokemon: 2 or 4: ")
       if pokemon_amount == '2':
             input_1 = input("Name the first Pokemon: ")
+            try:
+                  if name_array.index(input_1) in name_array:
+                        continue
+            except ValueError:
+                  print("No Pokemon Found! Make sure there are no spelling errors!")
+                  next_calculation = input("Let's do another calculation? (yes/no): ")
+                  if next_calculation == 'yes':
+                        continue
+                  if next_calculation == 'no':
+                        print("Goodbye!")
+                        time.sleep(1)
+                        break    
             input_2 = input("Name the second Pokemon: ")
+            try:
+                  if name_array.index(input_2) in name_array:
+                        continue
+            except ValueError:
+                  print("No Pokemon Found! Make sure there are no spelling errors!")
+                  next_calculation = input("Let's do another calculation? (yes/no): ")
+                  if next_calculation == 'yes':
+                        continue
+                  if next_calculation == 'no':
+                        print("Goodbye!")
+                        time.sleep(1)
+                        break
             if stat_array[name_array.index(input_1)] > stat_array[name_array.index(input_2)]:
                   print(input_1, "is faster than", input_2, "!")
             elif stat_array[name_array.index(input_1)] < stat_array[name_array.index(input_2)]:
