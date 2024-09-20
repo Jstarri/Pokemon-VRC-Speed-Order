@@ -1,4 +1,5 @@
 import time
+import random
 from tkinter import *
 root = Tk()
 root.title("Auto Pokemon Speed List")
@@ -43,7 +44,8 @@ while True:
             elif stat_array[name_array.index(input_1)] < stat_array[name_array.index(input_2)]:
                   print(input_1, "is slower than", input_2, "!")
             elif stat_array[name_array.index(input_1)] == stat_array[name_array.index(input_2)]:
-                  print(input_1, "is the same speed as", input_2, "!")
+                  print(input_1, "is the same speed as", input_2, "! Time for a coin flip! 1 is Heads & 2 is Tails!")
+                  print(random.randint(1,2))
       next_calculation = input("Let's do another calculation? (yes/no): ")
       if next_calculation == 'yes':
             continue
