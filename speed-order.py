@@ -1,9 +1,5 @@
 import time
 import random
-from tkinter import *
-root = Tk()
-root.title("Auto Pokemon Speed List")
-root.geometry('350x200')
 
 name_array = ["Greninja", "Mewtwo", "M_Rayquaza", "Seperior", "M_Lucario", "Lugia", "Zoroark", "Garchomp", "M_Charizard_X", "M_Gardevoir", "Charizard", "Typhlosion", "Xerneas", "Yveltal", "Mimikyu", "Kyurem", "Rayquaza", "M_Garchomp", "Giratina", "Lucario", "Suicune", "Arbok", "Chandelure", "Gardevoir", "Empoleon", "Torterra", "M_Mawile", "Mawile", "Golisopod"]
 stat_array = [132, 130, 115, 113, 112, 110, 105, 102, 100, 100, 100, 100, 99, 99, 96, 95, 95, 92, 90, 90, 85, 80, 80, 80, 60, 56, 50, 50, 40]
@@ -59,4 +55,3 @@ while True:
             print("Goodbye!")
             time.sleep(1)
             break
-root.mainloop()
