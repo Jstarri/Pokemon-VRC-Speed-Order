@@ -44,8 +44,14 @@ while True:
             elif stat_array[name_array.index(input_1)] < stat_array[name_array.index(input_2)]:
                   print(input_1, "is slower than", input_2, "!")
             elif stat_array[name_array.index(input_1)] == stat_array[name_array.index(input_2)]:
-                  print(input_1, "is the same speed as", input_2, "! Time for a coin flip! 1 is Heads & 2 is Tails!")
-                  print(random.randint(1,2))
+                  while stat_array[name_array.index(input_1)] == stat_array[name_array.index(input_2)]:
+                        print(input_1, "is the same speed as", input_2, "! Time for a coin flip! 1 is Heads & 2 is Tails!")
+                        print(random.randint(1,2))
+                        next_loop = input("Do you need another coin flip? (yes/no): ")
+                        if next_loop == 'yes':
+                              continue
+                        elif next_loop == 'no':
+                              break
       next_calculation = input("Let's do another calculation? (yes/no): ")
       if next_calculation == 'yes':
             continue
